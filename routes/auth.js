@@ -26,6 +26,7 @@ router.post('/login', function (req, res, next) {
 });
 
 router.post('/signup', function (req, res, next) {
+  
   let userObject = {
     firstName: req.body.firstName.trim(),
     lastName: req.body.lastName.trim(),
