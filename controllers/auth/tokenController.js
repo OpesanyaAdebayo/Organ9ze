@@ -20,6 +20,7 @@ const checkToken = (token) => {
     return new Promise((resolve, reject) => {
         jwt.verify(token, process.env.JWT_PRIVATE_KEY, (err, decodedToken) => {
             if (error) {
+                //chech for error types
                 return reject(Error(err));
             }
             resolve(decodedToken);
